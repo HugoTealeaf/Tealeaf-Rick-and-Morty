@@ -1,8 +1,8 @@
 object Versions {
 
-    const val gradleVersion = "4.1.3"
-    const val gradleNavigationArgVersion = "2.3.5"
-    const val kotlinVersion = "1.4.32"
+    const val gradleVersion = "7.1.3"
+    const val gradleNavigationArgVersion = "2.5.0"
+    const val kotlinVersion = "1.7.10"
     const val ktLintVersion = "10.1.0"
 
     // Core dependencies
@@ -16,8 +16,8 @@ object Versions {
     const val activityKtxVersion = "1.1.0"
 
     // Navigation component dependencies
-    const val navFragmentKtxVersion = "2.3.0"
-    const val navUiKtxVersion = "2.3.0"
+    const val navFragmentKtxVersion = "2.5.0"
+    const val navUiKtxVersion = "2.5.0"
 
     // LifeCycle dependencies
     const val viewmodelKtxVersion = "2.2.0"
@@ -34,8 +34,8 @@ object Versions {
     const val glideVersion = "4.11.0"
 
     // Dagger - Hilt dependencies
-    const val hiltAndroidVersion = "2.35"
-    const val hiltVersion = "1.0.0-alpha02"
+    const val hiltAndroidVersion = "2.42"
+    const val hiltVersion = "1.0.0"
 
     // Timber logging dependencies
     const val timberVersion = "4.7.1"

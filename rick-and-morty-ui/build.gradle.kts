@@ -10,16 +10,16 @@ plugins {
 
 android {
     compileSdkVersion(Config.Android.androidCompileSdkVersion)
-    buildToolsVersion(Config.Android.androidBuildToolsVersion)
+    buildToolsVersion = Config.Android.androidBuildToolsVersion
 
     defaultConfig {
-        applicationId(Environments.Release.appId)
+        applicationId = Environments.Release.appId
         minSdkVersion(Config.Android.androidMinSdkVersion)
         targetSdkVersion(Config.Android.androidTargetSdkVersion)
-        versionCode(Environments.Release.appVersionCode)
-        versionName(Environments.Release.appVersionName)
+        versionCode = Environments.Release.appVersionCode
+        versionName = Environments.Release.appVersionName
 
-        testInstrumentationRunner(Config.testRunner)
+        testInstrumentationRunner = Config.testRunner
 
         // Configs
         buildConfigField("String", "BASE_URL", "\"" + Environments.Release.baseUrl + "\"")

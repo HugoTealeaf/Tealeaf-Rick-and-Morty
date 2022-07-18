@@ -8,20 +8,16 @@ plugins {
 
 android {
     compileSdkVersion(Config.Android.androidCompileSdkVersion)
-    buildToolsVersion(Config.Android.androidBuildToolsVersion)
+    buildToolsVersion = Config.Android.androidBuildToolsVersion
 
     defaultConfig {
         minSdkVersion(Config.Android.androidMinSdkVersion)
         targetSdkVersion(Config.Android.androidTargetSdkVersion)
-        versionCode(Environments.Release.appVersionCode)
-        versionName(Environments.Release.appVersionName)
-
-        testInstrumentationRunner(Config.testRunner)
     }
 
     buildTypes {
         getByName("release") {
-            isDebuggable = false
+            //isDebuggable = false
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
