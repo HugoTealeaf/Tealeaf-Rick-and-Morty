@@ -3,7 +3,6 @@ package com.aqube.ram.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -60,11 +59,10 @@ class MainActivity : AppCompatActivity() {
 
         // Whenever the selected controller changes, setup the action bar.
         controller.observe(
-            this,
-            Observer { navController ->
-                setupActionBarWithNavController(navController)
-            }
-        )
+            this
+        ) { navController ->
+            setupActionBarWithNavController(navController)
+        }
         currentNavController = controller
     }
 
@@ -73,7 +71,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (currentNavController?.value?.graph?.startDestination == currentNavController?.value?.currentDestination?.id) {
+        if (currentNavController?.value?.graph?.startDestinationId == currentNavController?.value?.currentDestination?.id) {
             if (backPressedOnce) {
                 super.onBackPressed()
                 return

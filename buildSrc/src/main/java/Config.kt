@@ -4,8 +4,7 @@ object Config {
         // Android sdk and version
         const val androidMinSdkVersion = 21
         const val androidTargetSdkVersion = 29
-        const val androidCompileSdkVersion = 30
-        const val androidBuildToolsVersion = "30.0.2"
+        const val androidCompileSdkVersion = 32
     }
 
     object ClassPaths {

@@ -7,12 +7,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Config.Android.androidCompileSdkVersion)
-    buildToolsVersion = Config.Android.androidBuildToolsVersion
+    compileSdk = Config.Android.androidCompileSdkVersion
 
     defaultConfig {
-        minSdkVersion(Config.Android.androidMinSdkVersion)
-        targetSdkVersion(Config.Android.androidTargetSdkVersion)
+        minSdk = Config.Android.androidMinSdkVersion
+        targetSdk = Config.Android.androidTargetSdkVersion
     }
 
     buildTypes {
